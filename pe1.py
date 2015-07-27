@@ -1,12 +1,12 @@
-
-def find_sum(interval1 = 3, interval2 = 5, limit = 1000):
-    sum = 0
-    for i in range(interval1, limit):
-        if i % interval1 == 0 or i % interval2 == 0:
-            sum += i
-    return sum
+from pe1_library import *
 
 def main():
-    print(find_sum())
+    # print('main called')
+    print('Functionally we get: ' + str(find_sum()))
 
-main()
+# only execute main() if the script is being run directly, but not imported;
+# __name__ is set to '__main__' only if we run 'python pe1.py',
+# but not with 'import pe1'
+# (see stackoverflow.com/questions/419163/what-does-if-name-main-do for details)
+if __name__ == '__main__':
+    main()
